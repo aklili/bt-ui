@@ -13,14 +13,14 @@ define([
   setTimeout(function () {
    
     //初始化菜单 必须
-    NzSider.render('/data/menu.json', '#nzui-side-menu');
+    NzSider.render('/bt-ui/data/menu.json', '#nzui-side-menu');
 
     //初始化TABS 必须
     NzTabs.initTabs('#nzui-layout-tabs');
 
     //初始化默认页面 必须
     if (historyTabs === undefined) {
-      NzTabs.initTabsDefault('/pages/dashborad.html', '默认页面');
+      NzTabs.initTabsDefault('/bt-ui/pages/dashborad.html', '默认页面');
     } else {
       // console.log($.cookie('historyTabs'));
       // NzModal.show({

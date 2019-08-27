@@ -6,7 +6,7 @@
     "children": [
       {
         "text": "基础表单",
-        "url":"/pages/form/basic-form.html"
+        "url":"/bt-ui/pages/form/basic-form.html"
       }
     ]
   },
@@ -16,7 +16,7 @@
     "children": [
       {
         "text": "表格使用",
-        "url": "/pages/table/basic-table.html"
+        "url": "/bt-ui/pages/table/basic-table.html"
       }
     ]
   },{
@@ -25,14 +25,14 @@
     "children": [
       {
         "text": "Modal使用",
-        "url": "/pages/basiccom/modal.html"
+        "url": "/bt-ui/pages/basiccom/modal.html"
       },
       {
         "text": "消息提示",
-        "url": "/pages/basiccom/message.html"
+        "url": "/bt-ui/pages/basiccom/message.html"
       },{
         "text": "按钮Button",
-        "url": "/pages/basiccom/button.html"
+        "url": "/bt-ui/pages/basiccom/button.html"
       }
     ]
   },
@@ -106,7 +106,7 @@
     "children": [
       {
         "text": "使用前请认真阅读说明书",
-        "url": "/pages/doc.html"
+        "url": "/bt-ui/pages/doc.html"
       }
     ]
   }

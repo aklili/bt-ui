@@ -5,21 +5,21 @@ require.config({
     'zhCN': ['easyui'],
   },
   paths: {
-    'jquery': 'js/lib/jquery/jquery-1.8.3',
-    'easyui': 'js/lib/easyui/jquery.easyui.min',
-    'zhCN': 'js/lib/easyui/locale/easyui-lang-zh_CN',
-    'layer': 'js/lib/layer/layer',
-    'jquery.validate': 'js/lib/jquery.validate/jquery.validate',
-    'messages_zh': 'js/lib/jquery.validate/localization/messages_zh',
-    'jquery.cookie': 'js/lib/jquery.cookie/jquery.cookie',
+    'jquery': 'bt-ui/js/lib/jquery/jquery-1.8.3',
+    'easyui': 'bt-ui/js/lib/easyui/jquery.easyui.min',
+    'zhCN': 'bt-ui/js/lib/easyui/locale/easyui-lang-zh_CN',
+    'layer': 'bt-ui/js/lib/layer/layer',
+    'jquery.validate': 'bt-ui/js/lib/jquery.validate/jquery.validate',
+    'messages_zh': 'bt-ui/js/lib/jquery.validate/localization/messages_zh',
+    'jquery.cookie': 'bt-ui/js/lib/jquery.cookie/jquery.cookie',
     //自定义模块
-    'NzApp': '/js/modules/NzApp',
-    'NzSider': '/js/modules/NzSider',
-    'NzHttp': '/js/modules/NzHttp',
-    'NzTabs': '/js/modules/NzTabs',
-    'NzTools': '/js/modules/NzTools',
-    'NzForm': '/js/modules/NzForm',
-    'NzModal': '/js/modules/NzModal'
+    'NzApp': '/bt-ui/js/modules/NzApp',
+    'NzSider': '/bt-ui/js/modules/NzSider',
+    'NzHttp': '/bt-ui/js/modules/NzHttp',
+    'NzTabs': '/bt-ui/js/modules/NzTabs',
+    'NzTools': '/bt-ui/js/modules/NzTools',
+    'NzForm': '/bt-ui/js/modules/NzForm',
+    'NzModal': '/bt-ui/js/modules/NzModal'
   }
 });
 

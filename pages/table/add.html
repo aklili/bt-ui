@@ -1,0 +1,11 @@
+<h1>新增页面</h1>
+<button class="layui-btn" id="close">关闭</button>
+
+<script>
+  require(['jquery', 'NzTabs'], function ($, NzTabs) {
+    $('#close').on('click', function(){
+        NzTabs.closeTabs('新增用户');
+        NzTabs.selectedTabs('默认页面');
+    });
+  })
+</script>

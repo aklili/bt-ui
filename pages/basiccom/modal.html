@@ -1,0 +1,127 @@
+<fieldset class="layui-elem-field layui-field-title">
+  <legend>默认模态框</legend>
+</fieldset>
+<button class="nzui-btn nzui-btn-primary" id="show-modal-default">默认对话框</button>
+
+<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+  <legend>自定义按钮文字</legend>
+</fieldset>
+<button class="nzui-btn nzui-btn-dashed" id="show-modal-custom-btn-txt">自定义按钮文字</button>
+
+<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+  <legend>自定义多个模态框按钮</legend>
+</fieldset>
+<button class="nzui-btn nzui-btn-dashed" id="show-modal-custom-mup-btn">自定义多个按钮展示</button>
+
+<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+  <legend>自定义模态框高度</legend>
+</fieldset>
+<button class="nzui-btn nzui-btn-dashed" id="show-modal-custom-height">自定义模态框高度</button>
+
+<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+  <legend>通过URL加载模态框内容</legend>
+</fieldset>
+<button class="nzui-btn nzui-btn-dashed" id="show-modal-custom-content-url">通过URL加载模态框内容</button>
+<script>
+  require(['jquery', 'NzModal', 'layer'], function ($, NzModal, layer) {
+
+    //显示对话框 默认
+    $('#show-modal-default').on('click', function () {
+      //自定义按钮文字
+      NzModal.show({
+        content: '<p>我是简单的内容根据内容自动填充高度</p><p>我是简单的内容根据内容自动填充高度</p><p>我是简单的内容根据内容自动填充高度</p><p>我是简单的内容根据内容自动填充高度</p>',
+        confirm: function (index) {
+          //点击确定回调事件
+          //通过close关闭 模态对话框 参数为回调值 index
+          NzModal.close(index);
+          layer.msg("你点击了确定按钮，真棒～～")
+          console.log("确认回调")
+        },
+        cancel: function () {
+          //点击取消回调事件 可以不用写这个回调 除非你要特殊操作
+          layer.msg("你点击了取消按钮")
+          console.log("取消回调")
+        }
+      });
+    });
+
+    //自定义按钮文字
+    $('#show-modal-custom-btn-txt').on('click', function () {
+      //自定义按钮文字
+      NzModal.show({
+        title: '自定义按钮文字',
+        cancelText: '取消按钮',
+        confirmText: '保存按钮',
+        confirm: function (index) {
+          console.log("ooo")
+          layer.msg("你点击了确定按钮，真棒～～")
+        }
+      });
+    });
+
+    //自定义多个按钮
+    $('#show-modal-custom-mup-btn').on('click', function () {
+      NzModal.show({
+        title:'自定义多个按钮展示',
+        buttons: {
+          '提交': {
+            btnClass: 'success',
+            iconClass: 'fa fa-check',
+            callback: function () {
+              console.log('提交')
+              layer.msg("提交")
+            }
+          },
+          '审核通过': {
+            btnClass: 'info',
+            iconClass: 'fa fa-check',
+            callback: function () {
+              console.log('审核通过')
+              layer.msg("审核通过")
+            }
+          },
+          '审核不通过': {
+            btnClass: 'waring',
+            iconClass: 'fa fa-check',
+            callback: function () {
+              console.log('审核不通过')
+              layer.msg("审核不通过")
+            }
+          },
+          '错误按钮': {
+            btnClass: 'error',
+            iconClass: 'fa fa-check',
+            callback: function () {
+              console.log('错误按钮')
+              layer.msg("错误按钮")
+            }
+          }
+        },
+      })
+    });
+
+    //自定义模态框高度
+    $("#show-modal-custom-height").on('click', function(){
+       NzModal.show({
+        area:['600px','520px'],
+        content: '自定义模态框高和宽',
+        confirm: function (index) {
+          console.log("ooo")
+          layer.msg("你点击了确定按钮，真棒～～")
+        }
+      });
+    });
+
+    //通过URL加载模态框内容
+    $("#show-modal-custom-content-url").on('click', function () {
+      NzModal.show({
+        type:2,
+        url: '/pages/user/modify-password.html',
+        confirm: function (index) {
+          
+          layer.msg("你点击了确定按钮，真棒～～")
+        }
+      });
+    });
+  });
+</script>

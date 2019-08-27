@@ -1,0 +1,113 @@
+[
+  {
+    "text": "表单页面",
+    "state": "open",
+    "iconCls": "fa fa-wpforms",
+    "children": [
+      {
+        "text": "基础表单",
+        "url":"/pages/form/basic-form.html"
+      }
+    ]
+  },
+  {
+    "text": "表格使用",
+    "iconCls": "fa fa-wpforms",
+    "children": [
+      {
+        "text": "表格使用",
+        "url": "/pages/table/basic-table.html"
+      }
+    ]
+  },{
+    "text": "基础组件",
+    "iconCls": "fa fa-wpforms",
+    "children": [
+      {
+        "text": "Modal使用",
+        "url": "/pages/basiccom/modal.html"
+      },
+      {
+        "text": "消息提示",
+        "url": "/pages/basiccom/message.html"
+      },{
+        "text": "按钮Button",
+        "url": "/pages/basiccom/button.html"
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "parentId": 0,
+    "url": "javascript:void(0)",
+    "text": "系统设置",
+    "checked": false,
+    "iconCls": "fa fa-wpforms",
+    "children": [
+      {
+        "id": 2,
+        "parentId": 1,
+        "url": "sys/menu/index",
+        "text": "菜单管理",
+        "checked": false,
+        "state": null
+      },
+      {
+        "id": 3,
+        "parentId": 1,
+        "url": "sys/role/index",
+        "text": "角色管理",
+        "checked": false,
+        "state": null
+      },
+      {
+        "id": 4,
+        "parentId": 122,
+        "url": "sys/user/index",
+        "text": "用户管理",
+        "checked": false,
+        "state": null,
+        "children": [
+          {
+            "text": "用户管理-1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "parentId": 0,
+    "url": "javascript:void(0)",
+    "text": "多级菜单",
+    "checked": false,
+    "children": [
+      {
+        "text": "用户管理-1",
+        "children": [
+          {
+            "text": "用户管理-1",
+            "children": [
+              {
+                "text": "用户管理-1"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "text": "基础设置-1"
+      }
+    ]
+  },{
+    "id": 10,
+    "text": "使用说明书",
+    "iconCls": "fa fa-code",
+    "children": [
+      {
+        "text": "使用前请认真阅读说明书",
+        "url": "/pages/doc.html"
+      }
+    ]
+  }
+]

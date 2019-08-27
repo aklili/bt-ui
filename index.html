@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>基于easyui的后台管理系统</title>
+  <link rel="stylesheet" type="text/css" href="js/lib/easyui/themes/default/easyui.css" />
+  <link rel="stylesheet" type="text/css" href="css/nzui-base.css" />
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="js/lib/layui/css/layui.css" />
+  <link rel="stylesheet" href="js/lib/layer/theme/default/layer.css" />
+  <script type="text/javascript" data-main="js/main" src="js/lib/requirejs/require.js"></script>
+</head>
+
+<body>
+  <div id="nzui-layout" class="easyui-layout">
+    <div id="nzui-layout-header" data-options="region:'north',border:0">
+      <div class="nzui-layout-logo">
+        <h3>基于easyui的后台管理系统</h3>
+      </div>
+      <div class="nzui-layout-top">
+        <div class="nzui-header-user">
+          <i class="fa fa-user-circle"></i>
+          <span>超级管理员</span>
+        </div>
+        <div class="nzui-header-menu">
+          <ul>
+            <li>
+              <i class="fa fa-cog"></i>
+              <span>设置</span>
+            </li>
+            <li>
+              <i class="fa fa-bullhorn"></i>
+              <span>消息</span>
+            </li>
+            <li>
+              <i class="fa fa-envelope"></i>
+              <span>邮件</span>
+            </li>
+            <li>
+              <i class="fa fa-envelope"></i>
+              <span>邮件</span>
+            </li>
+            <li>
+              <i class="fa fa-envelope"></i>
+              <span>邮件</span>
+            </li>
+            <li>
+              <i class="fa fa-database"></i>
+              <span>数据库管理</span>
+            </li>
+          </ul>
+        </div>
+        <div id="nzui-user-menu" class="easyui-menu" style="width:120px;">
+          <div data-options="name:'info'">
+            <i class="fa fa-user fa-fw"></i>
+            <span>个人信息</span>
+          </div>
+          <div data-options="name:'modify'">
+            <i class="fa fa-pencil-square-o"></i>
+            <span>修改密码</span>
+          </div>
+          <div data-options="name:'out'">
+            <i class="fa fa-sign-out"></i>
+            <span>退出</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="nzui-layout-sider" data-options="region:'west',border:0">
+      <div id="nzui-side-menu"></div>
+    </div>
+    <div id="nzui-layout-main" data-options="region:'center',border:0">
+      <div id="nzui-layout-tabs" class="easyui-tabs"></div>
+    </div>
+  </div>
+</body>
+<script type="text/javascript">
+  setTimeout(function () {
+    require(['/js/pages/common.js'], function () { })
+  }, 100)
+</script>
+<style>
+
+</style>
+
+</html>

@@ -1,0 +1,242 @@
+<div>
+  <div class="layui-col-xs12">
+    <form class="nzui-form-horizontal" id="nzui-query-user-form">
+      <div class="layui-col-xs4">
+        <div class="nzui-form-item">
+          <div class="layui-col-xs3 nzui-form-item-label">
+            <label class="">查询参数1：</label>
+          </div>
+          <div class="layui-col-xs9 nzui-control-wrapper">
+            <div class="nzui-control-input">
+              <input class="easyui-textbox" name="name" type="text">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="layui-col-xs4">
+        <div class="nzui-form-item">
+          <div class="layui-col-xs3 nzui-form-item-label">
+            <label class="">查询参数2：</label>
+          </div>
+          <div class="layui-col-xs9 nzui-control-wrapper">
+            <div class="nzui-control-input">
+              <input class="easyui-textbox" name="name" type="text">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="layui-col-xs4">
+        <div class="nzui-form-item">
+          <div class="layui-col-xs3 nzui-form-item-label">
+            <label class="">查询参数3：</label>
+          </div>
+          <div class="layui-col-xs9 nzui-control-wrapper">
+            <div class="nzui-control-input">
+              <input class="easyui-textbox" name="name" type="text">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="layui-col-xs4">
+        <div class="nzui-form-item">
+          <div class="layui-col-xs3 nzui-form-item-label">
+            <label class="">查询参数4：</label>
+          </div>
+          <div class="layui-col-xs9 nzui-control-wrapper">
+            <div class="nzui-control-input">
+              <input class="easyui-textbox" name="name" type="text">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="layui-col-xs12">
+        <div class="nzui-form-item">
+          <a href="#" class="easyui-linkbutton" data-options="iconCls:'fa fa-plus-circle',plain:true" id="add">新增</a>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="layui-col-xs12">
+    <table class="easyui-datagrid" id="demo-table">
+    </table>
+    <div id="tb_tools">
+      <button class="nzui-btn nzui-btn-primary nzui-btn-small">
+        <i class="fa fa-plus-circle"></i>
+        <span>新增</span>
+      </button>
+      <button class="nzui-btn nzui-btn-warning nzui-btn-small">
+        <i class="fa fa-trash"></i>
+        <span>删除</span>
+      </button>
+    </div>
+  </div>
+  <div id="menu" class="easyui-menu" style="width: 50px; display: none;">
+    <!--放置一个隐藏的菜单Div-->
+    <div>增加</div>
+    <div data-options="iconCls:'icon-save'" onclick="">删除</div>
+    <!--具体的菜单事件请自行添加，跟toolbar的方法是基本一样的-->
+    <div>修改</div>
+  </div>
+</div>
+<style>
+
+</style>
+<script>
+  require(['jquery', 'NzTabs', 'NzTools'], function ($, NzTabs, NzTools) {
+
+
+    $("#demo-table").datagrid({
+      nowrap: false,
+      height: NzTools.tableHeight('#nzui-query-user-form'),
+      pagination: true,
+      nowrap: true,
+      method: 'GET',
+      toolbar: '#tb_tools',
+      //url:'https://easy-mock.com/mock/5d55148cc6be364a2ac77e4f/aca/list',后台数据地址
+      frozenColumns: [[
+        { field: 'ck', checkbox: true },
+        { field: 'id', title: 'ID', sortable: true, fixed: true, width: 100 }
+      ]],
+      columns: [[
+        { field: 'name', title: '姓名', width: 100 },
+        { field: 'age', title: '年龄', width: 100 },
+        { field: 'address', title: '地址' },
+        { field: 'job', title: '职业' },
+        { field: 'hobby', title: '爱好' },
+        { field: 'nationality', title: '国籍', width: 100 },
+        { field: 'sex', title: '性别', width: 100 },
+        { field: 'height', title: '身高', width: 100 },
+        { field: 'weight', title: '体重', width: 100 }
+      ]],
+      onRowContextMenu: function (e, rowIndex, rowData) { //右键时触发事件
+        e.preventDefault(); //阻止浏览器捕获右键事件
+        if (rowData === null) {
+          return;
+        }
+        //三个参数：e里面的内容很多，真心不明白，rowIndex就是当前点击时所在行的索引，rowData当前行的数据
+        $(this).datagrid("clearSelections"); //取消所有选中项
+        $(this).datagrid("selectRow", rowIndex); //根据索引选中该行
+        $('#menu').menu('show', {
+          //显示右键菜单
+          left: e.pageX,//在鼠标点击处显示菜单
+          top: e.pageY
+        });
+      },
+      data: [{
+        "id": 1,
+        "name": "李四",
+        "age": 100,
+        "address": "云南省昆明市五华区潘家湾人民村4号5栋505",
+        "job": "前端开发练习生",
+        "hobby": "喜欢唱，跳，rap，当然还有篮球",
+        "nationality": "中国",
+        "sex": "男",
+        "height": "175cm",
+        "weight": "100kg"
+      },
+      {
+        "id": 2,
+        "name": "李五",
+        "age": 100,
+        "address": "云南省昆明市五华区潘家湾人民村4号5栋505",
+        "job": "前端开发练习生",
+        "hobby": "喜欢唱，跳，rap，当然还有篮球",
+        "nationality": "中国",
+        "sex": "男",
+        "height": "175cm",
+        "weight": "100kg"
+      },
+      {
+        "id": 3,
+        "name": "李六",
+        "age": 58,
+        "address": "云南省昆明市五华区潘家湾人民村4号5栋505",
+        "job": "前端开发练习生",
+        "hobby": "喜欢唱，跳，rap，当然还有篮球",
+        "nationality": "中国",
+        "sex": "男",
+        "height": "175cm",
+        "weight": "100kg"
+      },
+      {
+        "id": 3,
+        "name": "李六",
+        "age": 58,
+        "address": "云南省昆明市五华区潘家湾人民村4号5栋505",
+        "job": "前端开发练习生",
+        "hobby": "喜欢唱，跳，rap，当然还有篮球",
+        "nationality": "中国",
+        "sex": "男",
+        "height": "175cm",
+        "weight": "100kg"
+      },
+      {
+        "id": 3,
+        "name": "李六",
+        "age": 58,
+        "address": "云南省昆明市五华区潘家湾人民村4号5栋505",
+        "job": "前端开发练习生",
+        "hobby": "喜欢唱，跳，rap，当然还有篮球",
+        "nationality": "中国",
+        "sex": "男",
+        "height": "175cm",
+        "weight": "100kg"
+      }, {
+        "id": 3,
+        "name": "李六",
+        "age": 58,
+        "address": "云南省昆明市五华区潘家湾人民村4号5栋505",
+        "job": "前端开发练习生",
+        "hobby": "喜欢唱，跳，rap，当然还有篮球",
+        "nationality": "中国",
+        "sex": "男",
+        "height": "175cm",
+        "weight": "100kg"
+      }, {
+        "id": 3,
+        "name": "李六",
+        "age": 58,
+        "address": "云南省昆明市五华区潘家湾人民村4号5栋505",
+        "job": "前端开发练习生",
+        "hobby": "喜欢唱，跳，rap，当然还有篮球",
+        "nationality": "中国",
+        "sex": "男",
+        "height": "175cm",
+        "weight": "100kg"
+      }
+        , {
+        "id": 3,
+        "name": "李六",
+        "age": 58,
+        "address": "云南省昆明市五华区潘家湾人民村4号5栋505",
+        "job": "前端开发练习生",
+        "hobby": "喜欢唱，跳，rap，当然还有篮球",
+        "nationality": "中国",
+        "sex": "男",
+        "height": "175cm",
+        "weight": "100kg"
+      }]
+    })
+
+    //分页事件
+    var pager = $("#demo-table").datagrid("getPager");
+    pager.pagination({
+      total: 200,
+      displayMsg: '当前显示从第{from}条到{to}条 共{total}条记录',
+      onSelectPage: function (pageNo, pageSize) {
+
+        //加载表格事件
+        // $('#demo-table').datagrid('load', {
+        //   code: '01',
+        //   name: 'name01'
+        // });
+      }
+    });
+
+    //新增选项卡
+    $("#add").on('click', function () {
+      NzTabs.addTabs('/pages/table/add', '新增用户', false);
+    })
+
+  });
+</script>

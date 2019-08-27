@@ -1,0 +1,181 @@
+<div>
+  <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+    <legend>水平表单</legend>
+  </fieldset>
+  <form class="nzui-form-horizontal" name="example_form" style="width: 560px" onsubmit="return false" id="example_form">
+    <div class="nzui-form-item">
+      <div class="layui-col-xs3 nzui-form-item-label">
+        <label class="">用户名：</label>
+      </div>
+      <div class="layui-col-xs9 nzui-control-wrapper">
+        <div class="nzui-control-input">
+          <input class="easyui-textbox" name="name" type="text" />
+        </div>
+      </div>
+    </div>
+    <div class="nzui-form-item">
+      <div class="layui-col-xs3 nzui-form-item-label">
+        <label class="">爱好：</label>
+      </div>
+      <div class="layui-col-xs9 nzui-control-wrapper">
+        <div class="nzui-control-input">
+          <label class="nzui-checkbox-item">
+            <input type="radio" class="easyui-checkbox" name="hobby" value="rap" />
+            <span>rap</span>
+          </label>
+          <label class="nzui-checkbox-item">
+            <input type="radio" class="easyui-checkbox" name="hobby" value="篮球" />
+            <span>篮球</span>
+          </label>
+          <label class="nzui-checkbox-item">
+            <input type="radio" class="easyui-checkbox" name="hobby" value="唱跳" />
+            <span>唱跳</span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="nzui-form-item">
+      <div class="layui-col-xs3 nzui-form-item-label">
+        <label class="">性别：</label>
+      </div>
+      <div class="layui-col-xs9 nzui-control-wrapper">
+        <div class="nzui-control-input">
+          <label class="nzui-radio-item">
+            <input class="easyui-radiobutton" name="sex" value=" 男" />
+            <span>男</span>
+          </label>
+          <label class="nzui-radio-item">
+            <input class="easyui-radiobutton" name="sex" value="女" />
+            <span>女</span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="nzui-form-item">
+      <div class="layui-col-xs3 nzui-form-item-label">
+        <label class="">邮箱：</label>
+      </div>
+      <div class="layui-col-xs9 nzui-control-wrapper">
+        <div class="nzui-control-input">
+          <input class="easyui-textbox" name="email" type="text">
+        </div>
+      </div>
+    </div>
+    <div class="nzui-form-item">
+      <div class="layui-col-xs3 nzui-form-item-label">
+        <label class="">密码：</label>
+      </div>
+      <div class="layui-col-xs9 nzui-control-wrapper">
+        <div class="nzui-control-input">
+          <input class="easyui-textbox " name="password" type="password" id="password">
+        </div>
+      </div>
+    </div>
+    <div class="nzui-form-item">
+      <div class="layui-col-xs3 nzui-form-item-label">
+        <label class="">确认密码：</label>
+      </div>
+      <div class="layui-col-xs9 nzui-control-wrapper">
+        <div class="nzui-control-input">
+          <input class="easyui-textbox" name="confirmPassword" type="password" />
+        </div>
+      </div>
+    </div>
+    <div class="nzui-form-item">
+      <div class="layui-col-xs3 nzui-form-item-label">
+        <label class="">昵称：</label>
+      </div>
+      <div class="layui-col-xs9 nzui-control-wrapper">
+        <div class="nzui-control-input">
+          <input class="easyui-textbox" name="nickName" type="text">
+        </div>
+      </div>
+    </div>
+    <div class="nzui-form-item">
+      <div class="layui-col-xs3 nzui-form-item-label">
+        <label class="">日期选择：</label>
+      </div>
+      <div class="layui-col-xs9 nzui-control-wrapper">
+        <div class="nzui-control-input">
+          <input class="easyui-datebox" name="date" />
+        </div>
+      </div>
+    </div>
+    <div class="nzui-form-item">
+      <div class="layui-col-xs3 nzui-form-item-label">
+        <label class="">时间选择：</label>
+      </div>
+      <div class="layui-col-xs9 nzui-control-wrapper">
+        <div class="nzui-control-input">
+          <input class="easyui-datetimebox"" name=" time" />
+        </div>
+      </div>
+    </div>
+    <div class="nzui-form-item">
+      <div class="layui-col-xs3 nzui-form-item-label">
+        <label class="">时间选择：</label>
+      </div>
+      <div class="layui-col-xs9 nzui-control-wrapper">
+        <div class="nzui-control-input">
+          <input id="ss" class="easyui-timespinner" />
+        </div>
+      </div>
+    </div>
+    <div class="nzui-form-item">
+      <div class="layui-col-xs3 nzui-form-item-label">
+        <label class="">下拉选择：</label>
+      </div>
+      <div class="layui-col-xs9 nzui-control-wrapper">
+        <div class="nzui-control-input">
+          <select class="easyui-combobox" name="state">
+            <option selected value="">请选择</option>
+            <option value="AL">Alabama</option>
+            <option value="AK">Alaska</option>
+            <option value="AZ">Arizona</option>
+            <option value="AR">Arkansas</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="nzui-form-item">
+      <div class="layui-col-xs9 layui-col-md-offset3 nzui-control-wrapper">
+        <button class="nzui-btn nzui-btn-primary  nzui-btn-long" type="submit" id="save-horizontal">提交</button>
+      </div>
+    </div>
+  </form>
+</div>
+<script>
+  require(['jquery', 'NzForm'], function ($, NzForm) {
+
+   
+    var validator = $("#example_form").validate({
+      rules: {
+        name: "required",
+        email: {
+          required: true,
+          email: true,
+        },
+        state: 'required',
+        hobby: 'required',
+        sex: 'required'
+      },
+      messages: {
+        name: "请输入您的名字",
+        email: {
+          required: '请输入邮箱',
+          email: '请输入有效的邮箱'
+        },
+        state: '请选择',
+        hobby: '请选择爱好',
+        sex: '请选择性别'
+      },
+      submitHandler: function (form) {
+        //console.log(form)
+        alert("submitted");
+        alert(JSON.stringify(NzForm.JSON(form)));
+        // form.submit();
+        return false;
+      }
+    });
+  })
+</script>

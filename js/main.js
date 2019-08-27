@@ -1,5 +1,5 @@
 require.config({
-  baseUrl: '/',
+  baseUrl: '/bt-ui/',
   shim: {
     'easyui': ['jquery'],
     'layer': ['jquery'],

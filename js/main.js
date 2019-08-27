@@ -5,21 +5,21 @@ require.config({
     'zhCN': ['easyui'],
   },
   paths: {
-    'jquery': '/js/lib/jquery/jquery-1.8.3',
-    'easyui': '/js/lib/easyui/jquery.easyui.min',
-    'zhCN': '/js/lib/easyui/locale/easyui-lang-zh_CN',
-    'layer': '/js/lib/layer/layer',
+    'jquery': 'js/lib/jquery/jquery-1.8.3',
+    'easyui': 'js/lib/easyui/jquery.easyui.min',
+    'zhCN': 'js/lib/easyui/locale/easyui-lang-zh_CN',
+    'layer': 'js/lib/layer/layer',
     'jquery.validate': '/js/lib/jquery.validate/jquery.validate',
     'messages_zh': '/js/lib/jquery.validate/localization/messages_zh',
     'jquery.cookie': '/js/lib/jquery.cookie/jquery.cookie',
     //自定义模块
-    'NzApp': '/js/modules/NzApp',
-    'NzSider': '/js/modules/NzSider',
-    'NzHttp': '/js/modules/NzHttp',
-    'NzTabs': '/js/modules/NzTabs',
-    'NzTools': '/js/modules/NzTools',
-    'NzForm': '/js/modules/NzForm',
-    'NzModal': '/js/modules/NzModal'
+    'NzApp': 'js/modules/NzApp',
+    'NzSider': 'js/modules/NzSider',
+    'NzHttp': 'js/modules/NzHttp',
+    'NzTabs': 'js/modules/NzTabs',
+    'NzTools': 'js/modules/NzTools',
+    'NzForm': 'js/modules/NzForm',
+    'NzModal': 'js/modules/NzModal'
   }
 });
 
